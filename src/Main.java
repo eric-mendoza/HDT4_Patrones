@@ -31,7 +31,7 @@ public class Main {
             }
         }
 
-        CalculadoraP calculadora = CalculadoraP.getInstance();
+        Calculadora calculadora = Calculadora.getInstance();
 
     }
 }
