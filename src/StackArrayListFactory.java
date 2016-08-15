@@ -1,13 +1,9 @@
 /**
  * Created by Eric on 15/08/2016.
  */
-public class ListFactory extends AbstractFactory {
+public class StackArrayListFactory extends AbstractStackFactory {
     @Override
     Stack getStackList(String list) {
-        if (list.equalsIgnoreCase("Simple")){
-            return new StackSinglyLinkedList();
-        }
-
         return null;
     }
 

@@ -8,7 +8,7 @@ import java.util.Vector;
  * @since 14/08/2016
  * @version 2.0
  */
-public abstract class AbstractFactory {
+public abstract class AbstractStackFactory {
     abstract Stack getStackList(String list);
     abstract Stack getStackVector(String vector);
     abstract Stack getStackArrayList(String arrayList);
