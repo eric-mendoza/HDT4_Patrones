@@ -19,19 +19,30 @@ public class Main {
         System.out.println("Bienvenido! \nSeleccione el tipo de memoria que desea utilizar (Lista/Vector/ArrayList): ");
 
         String tipoMemoria = "";
+        String tipoFactory = "";
+
         Scanner scanner = new Scanner(System.in);
+
+        // Se define el tipo de Factory que se utilizara
         if (scanner.hasNext()){
-            tipoMemoria = scanner.nextLine();
+            tipoFactory = scanner.nextLine();
         }
 
-        if (tipoMemoria.equalsIgnoreCase("Lista")){
+        // Se define el tipo de Stack que se utilizara
+        if (tipoFactory.equalsIgnoreCase("Lista")){
             System.out.println("Ingrese el tipo de lista que desea utilizar (Simple/Doble/Circular): ");
             if (scanner.hasNext()){
                 tipoMemoria = scanner.nextLine();
             }
+        } else {
+            tipoMemoria = tipoFactory;
         }
 
         Calculadora calculadora = Calculadora.getInstance();
+
+        int resultado = calculadora.operar(operacion, tipoFactory, tipoMemoria);
+
+        System.out.println("El resultado es:\n " + operacion+" = "  + resultado);
 
 
     }

@@ -16,7 +16,7 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 
     @Override
     public int size() {
-        return 0;
+        return count;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 
     @Override
     public E getLast() {
-        return null;
+        return tail.value();
     }
 
     @Override
