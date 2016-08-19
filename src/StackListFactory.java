@@ -5,14 +5,14 @@
  * @since 14/08/2016
  * @version 1.0
  */
-public class StackListFactory<E> extends AbstractStackFactory<E> {
+public class StackListFactory extends AbstractStackFactory {
     /**
      * Metodo que devuelve un stack tipo lista segun lo indicado por el usuario
      * @param list Es el tipo de StackList que se desea (Simple, doble o circular)
      * @return Devuelve un Stack
      */
     @Override
-    Stack getStackList(String list) {
+    <E> Stack<E> getStack(String list) {
         if (list.equalsIgnoreCase("Simple")){
             return new StackSinglyLinkedList<E>();
 
@@ -24,16 +24,6 @@ public class StackListFactory<E> extends AbstractStackFactory<E> {
 
         }
 
-        return null;
-    }
-
-    @Override
-    Stack getStackVector(String vector) {
-        return null;
-    }
-
-    @Override
-    Stack getStackArrayList(String arrayList) {
         return null;
     }
 }

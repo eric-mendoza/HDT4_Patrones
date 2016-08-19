@@ -7,20 +7,11 @@
  */
 public class StackVectorFactory extends AbstractStackFactory{
     @Override
-    Stack getStackList(String list) {
-        return null;
-    }
-
-    @Override
-    Stack getStackVector(String vector) {
+    <E> Stack<E> getStack(String vector) {
         if (vector.equalsIgnoreCase("Vector")){
-            return new StackVector();
+            return new StackVector<E>();
         }
         return null;
     }
 
-    @Override
-    Stack getStackArrayList(String arrayList) {
-        return null;
-    }
 }

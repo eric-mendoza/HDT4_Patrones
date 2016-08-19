@@ -34,20 +34,10 @@ public class Calculadora {
      */
     public int operar(String expresion, String tipoFactory, String tipoMemoria){
         // Crear Stack
-        @SuppressWarnings("unchecked")
-        AbstractStackFactory<Integer> stackFactory = FactoryProducer.getFactory(tipoFactory);  // Obtiene el factory
+        AbstractStackFactory stackFactory = FactoryProducer.getFactory(tipoFactory);  // Obtiene el factory
         Stack<Integer> memoria = null;
+        memoria = stackFactory.getStack(tipoMemoria);
 
-        if (tipoFactory.equalsIgnoreCase("Lista")){
-            assert stackFactory != null;
-            memoria = stackFactory.getStackList(tipoMemoria);
-        } else if (tipoFactory.equalsIgnoreCase("Vector")){
-            assert stackFactory != null;
-            memoria = stackFactory.getStackVector(tipoMemoria);
-        } else if (tipoFactory.equalsIgnoreCase("ArrayList")){
-            assert stackFactory != null;
-            memoria = stackFactory.getStackArrayList(tipoMemoria);
-        }
 
         int n1, n2, resultado;
         for (int i = 0; i < expresion.length(); i=i+2) {

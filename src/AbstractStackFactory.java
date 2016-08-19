@@ -5,8 +5,6 @@
  * @since 14/08/2016
  * @version 1.0
  */
-public abstract class AbstractStackFactory<E> {
-    abstract Stack<E> getStackList(String list);
-    abstract Stack<E> getStackVector(String vector);
-    abstract Stack<E> getStackArrayList(String arrayList);
+public abstract class AbstractStackFactory {
+    abstract <E> Stack<E> getStack(String list);
 }
